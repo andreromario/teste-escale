@@ -36,7 +36,7 @@ gulp.task('sass',function(){
         }))
         .pipe(cleanCss())
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/css'))       
 });
 
 gulp.task('js',function(){
@@ -90,8 +90,8 @@ gulp.task('watch', function(){
     gulp.watch('src/images/**/*',['image']);
 
     gulp.watch('dist/images/**/*',['reload']);
-    gulp.watch('dist/css/**/*.css',['reload']);
-    gulp.watch('dist/js/**/*.js',['reload']);
+    gulp.watch('dist/css/**/*',['reload']);
+    gulp.watch('dist/js/**/*',['reload']);
     gulp.watch('dist/**/*.html',['reload']);
 });
 

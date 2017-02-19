@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+
+	transition: all 0.3s;
+}
+
+$grid-gutter: 0;
+$grid-columns: 12;
+$grid-max: 980px;
+
+.container {
+	max-width: $grid-max;
+	margin: 0 auto;
+}
+
+////
+// Grids
+////
+[class*="grid-"] {
+	float: left;
+	margin: 0 $grid-gutter;
+	margin-bottom: 20px;
+}
+
+@for $i from 1 through $grid-columns{ 
+	.grid-#{$i} {
+		width: 100% / $grid-columns * $i;
+
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+}
+
+.repo {	
+	border: 2px solid #000;
+	min-height: 360px;
+	border-radius: 5px;
+
+	article {
+		h3 {
+			text-align: center;
+
+			a {
+				padding: 15px 0;
+				display: block;
+				color: #FFF;
+				background: #ccc;
+
+				&:hover {
+					background: #000;
+				}
+			}
+		}
+
+		.header-repo {
+		    float: left;
+		    width: 100%;	
+		}
+
+		.footer-repo {
+		    float: left;
+		    width: 100%;
+			padding: 30px 20px 0;
+		}
+
+		.owner {
+			text-align: center;
+		}
+
+		.avatar-owner {
+			width: 60px !important;
+			border-radius: 50%;
+		}	
+	}
+}
