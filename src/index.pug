@@ -6,7 +6,7 @@ block vars
 	- var description = 'Desenvolvedor especializado em sites, sites responsivos, sistemas MVC, CodeIgniter, WordPress e Mobile First'
 
 	div.container
-		.grid-12
+		.grid-6
 			p Filtrar por Linguagem: 
 			select(id='filter-language')
 				option(value='JavaScript') JavaScript
@@ -18,7 +18,14 @@ block vars
 				option(value='HTML') HTML
 				option(value='Python') Python
 				option(value='PHP') PHP
-				option(value='Null') Null
+				option(value='All') All
+
+		.grid-6
+			p Ordenar: 
+			select(id='order')
+				option(value='Alphabetically') Alphabetically
+				option(value='Stars') Stars
+				option(value='Open Issues') Open Issues
 
 	div.container#gerar
 
