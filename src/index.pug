@@ -5,26 +5,21 @@ block vars
 	- var keywords = 'Desenvolvedor Front-end, Desenvolvedor Full Stack, Sites, Sites Responsivos, WordPress, Mobile First'
 	- var description = 'Desenvolvedor especializado em sites, sites responsivos, sistemas MVC, CodeIgniter, WordPress e Mobile First'
 
-	div.container#gerar
-		//- div.grid-3
-		//- 	article
-		//- 		div.container
-		//- 			div.grid-12
-		//- 				h3(data-name='') Nome do Repositório
-		//- 			div.grid-4
-		//- 				img(src='https://dummyimage.com/60x60/000/fff',alt='Nome do Author',title='Nome do Author')
-		//- 			div.grid-8
-		//- 				div.container
-		//- 					.grid-12
-		//- 						p Descrição bacana do repositório
-		//- 						br
-		//- 						p PHP
-		//- 			div.grid-12
-		//- 				p 12 Stars
-		//- 				p 12 Open Issues
-		//- 				br
-		//- 				p Criado em: 
-		//- 				p Último commit: 
+	div.container
+		.grid-12
+			p Filtrar por Linguagem: 
+			select(id='filter-language')
+				option(value='JavaScript') JavaScript
+				option(value='Ruby') Ruby
+				option(value='Dart') Dart
+				option(value='CoffeeScript') CoffeeScript
+				option(value='CSS') CSS
+				option(value='Shell') Shell
+				option(value='HTML') HTML
+				option(value='Python') Python
+				option(value='PHP') PHP
+				option(value='Null') Null
 
+	div.container#gerar
 
 block content
